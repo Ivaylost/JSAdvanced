@@ -1,0 +1,20 @@
+function solve(num){
+    let digit;
+    let sum = 0;
+    let isValid = true;
+    let result = num % 10;
+
+    while(num > 0){
+        digit = num % 10
+        if(result != digit){
+            isValid = false
+        }
+        sum += digit;
+        num = Math.trunc(num / 10)
+    }
+    console.log(isValid)
+    console.log(sum)
+}
+
+solve(2222222)
+solve(1234)
